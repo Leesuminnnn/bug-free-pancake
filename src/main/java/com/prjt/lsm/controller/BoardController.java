@@ -127,77 +127,68 @@ public class BoardController {
 		return "board/View";
 
 	}
-	
-	//게시물 수정하기
+
+	// 게시물 수정하기
 	@RequestMapping("Modify.do/{bidx}")
-	public String Modify(@PathVariable("bidx") Integer bidx,BoardVo vo, Model mav, HttpServletRequest request) {
-		
-		
+	public String Modify(@PathVariable("bidx") Integer bidx, BoardVo vo, Model mav, HttpServletRequest request) {
+
 		System.out.println("######################수정페이지");
-		
-		
+
 		mav.addAttribute("vo", boardService.View(vo));
-		
-		
+
 		return "board/Modify";
-		
+
 	}
 
 	@RequestMapping("Update.do")
 	public String update(BoardVo vo, HttpServletRequest request) {
-	 
+
 		System.out.println("######################수정 처리 페이지");
-	
-		
+
 		// ---파일 업로드 관련 --
-		
+
 		String filename = "-";
-		if(!vo.getFiles().isEmpty()) {
+		if (!vo.getFiles().isEmpty()) {
 			filename = vo.getFiles().getOriginalFilename();
 			try {
 				ServletContext application = request.getSession().getServletContext();
 				String path = application.getRealPath("/resources/images/");
-				System.out.println("path =" +path);
-				
+				System.out.println("path =" + path);
+
 				new File(path).mkdir();
-				vo.getFiles().transferTo(new File(path+filename));
+				vo.getFiles().transferTo(new File(path + filename));
 			} catch (Exception e) {
-                 e.printStackTrace();
+				e.printStackTrace();
 			}
 			vo.setFilename(filename);
-			
-			
+
 		}
-		
+
 		System.out.println("#########################" + vo.getFilename());
-		
-		
-		
+
 		boardService.update(vo);
 		return "redirect:/board/List.do";
-		
+
 	}
-	
+
 	@RequestMapping("Delete.do/{bidx}")
-	public String Delete(@PathVariable("bidx") Integer bidx,HttpServletRequest request, BoardVo vo) {
-						
+	public String Delete(@PathVariable("bidx") Integer bidx, HttpServletRequest request, BoardVo vo) {
+
 		System.out.println("###################삭제 페이지");
-		
+
 		String filename = boardService.file_info(bidx);
-		
-		if(filename != null && !filename.equals("-")) {
+
+		if (filename != null && !filename.equals("-")) {
 			ServletContext application = request.getSession().getServletContext();
 			String path = application.getRealPath("/resources/images/");
-			File f = new File(path+filename);
-			
-			if(f.exists())
+			File f = new File(path + filename);
+
+			if (f.exists())
 				f.delete();
 		}
-		
-		
-		
+
 		boardService.delete(bidx);
-		
+
 		return "redirect:/board/List.do";
-		}
+	}
 }

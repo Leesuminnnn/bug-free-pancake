@@ -7,7 +7,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>View</title>
+<title>Write</title>
+<c:import url="${pageContext.request.contextPath}/resources/css/self.css"/>
 <script src="https://kit.fontawesome.com/6c060c00b1.js"
 	crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -38,7 +38,8 @@
 						class="sr-only">(current)</span>
 				</a></li>
 				<!-- Link 메뉴 -->
-
+				<li class="nav-item"><a class="nav-link"
+							href="${pageContext.request.contextPath}/#">링크1</a></li>
 				<c:choose>
 					<c:when test="${sessionScope.userid != null}">
 						<li class="nav-item"><a class="nav-link"
@@ -61,7 +62,7 @@
 						</a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item"
-								href="${pageContext.request.contextPath}/member/info.do">마이페이지</a>
+								href="${pageContext.request.contextPath}/member/Info.do">마이페이지</a>
 						</div>
 					</div>
 				</li>
@@ -147,5 +148,8 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
+	<footer>
+	
+	</footer>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <script src="https://kit.fontawesome.com/6c060c00b1.js"
 	crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -20,8 +21,19 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+<style type="text/css">
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+</style>
 </head>
 <body class="text-center">
+
 	<form method="post">
 		<input type="hidden" name="type" value="${pageMaker.cri.type}">
 		<input type="hidden" name="page" value="${pageMaker.cri.page}">

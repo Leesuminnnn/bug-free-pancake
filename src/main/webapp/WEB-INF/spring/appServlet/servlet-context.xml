@@ -53,8 +53,17 @@
 			<mapping path="/**"/>
 			
 			<exclude-mapping path="/"/>
-			<exclude-mapping path="/resources/*"/>
+			<exclude-mapping path="/home.do"/>
+			<exclude-mapping path="/resources/**"/>
 			<exclude-mapping path="/resources/images"/>
+			<exclude-mapping path="/member/Lo**"/>
+			<exclude-mapping path="/member/Jo*.do"/>
+			<exclude-mapping path="/member/Info.do"/>
+			<exclude-mapping path="/include/**"/>
+			<exclude-mapping path="/board/**"/>
+			<exclude-mapping path="/checkId.do"/>
+			<exclude-mapping path="/resources/css/*"/>
+			
 			<beans:bean id="loginInterceptor" class="com.prjt.lsm.interceptor.LoginInterceptor"/>
 		</interceptor>
 	</interceptors>

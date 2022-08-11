@@ -42,7 +42,7 @@
 					</a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item"
-							href="${pageContext.request.contextPath}/member/info.do">마이페이지</a>
+							href="${pageContext.request.contextPath}/member/Info.do">마이페이지</a>
 					</div>
 				</div>
 			</li>
@@ -78,14 +78,8 @@
 			}
 		});
 	</script>
-		<!-- 검색 메뉴 -->
-		<form class="form-inline my-2 my-lg-0 input-group">
-			<input class="form-control mr-sm-2" type="search"
-				placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
+		
 	</div>
 </nav>
 <div class="pb-5"></div>
-<div class="pb-5"></div>
-<div class="pb-5"></div>
+<div class="pb-2"></div>

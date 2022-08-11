@@ -30,6 +30,7 @@
 	<div class="row">
 		<div class="col-4"></div>
 		<div class="col-4">
+		
 		<form action="${pageContext.request.contextPath}/member/LoginProcess.do" method="post">
 		<div class="form-group">
 			<input class="form-control" type="text" name="member_id" placeholder="input id">
@@ -37,6 +38,7 @@
 		</div>
 		<button class="btn btn-outline-dark" type="submit">Login</button>
 		</form>
+		
 		</div>
 		<div class="col-4"></div>
 	</div>
