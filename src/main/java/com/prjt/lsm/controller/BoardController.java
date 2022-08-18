@@ -82,21 +82,21 @@ public class BoardController {
 	@RequestMapping(value = "WriteProcess.do", method = RequestMethod.POST)
 	public String WriteProcess(Locale locale, BoardVo vo, MultipartHttpServletRequest request) throws Exception {
 
-		String filename = "-";
-		if (!vo.getFiles().isEmpty()) {
-			filename = vo.getFiles().getOriginalFilename();
-			try {
-				ServletContext application = request.getSession().getServletContext();
-				String path = application.getRealPath("/resources/images/");
-				System.out.println("path =" + path);
-
-				new File(path).mkdir();
-				vo.getFiles().transferTo(new File(path + filename));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		vo.setFilename(filename);
+//		String filename = "-";
+//		if (!vo.getFiles().isEmpty()) {
+//			filename = vo.getFiles().getOriginalFilename();
+//			try {
+//				ServletContext application = request.getSession().getServletContext();
+//				String path = application.getRealPath("/resources/images/");
+//				System.out.println("path =" + path);
+//
+//				new File(path).mkdir();
+//				vo.getFiles().transferTo(new File(path + filename));
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		vo.setFilename(filename);
 		boardService.insert(vo);
 
 		return "redirect:/board/List.do";
@@ -170,7 +170,8 @@ public class BoardController {
 		return "redirect:/board/List.do";
 
 	}
-
+	
+	//게시물 삭제하기
 	@RequestMapping("Delete.do/{bidx}")
 	public String Delete(@PathVariable("bidx") Integer bidx, HttpServletRequest request, BoardVo vo) {
 

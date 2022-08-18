@@ -18,7 +18,8 @@
 	crossorigin="anonymous"></script>
 
 </head>
-<body class="text-center">
+<body class="">
+<div class="text-center">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<a class="navbar-brand"
 			href="${pageContext.request.contextPath}/home.do">Logo</a>
@@ -149,8 +150,7 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
-	<footer>
-	
-	</footer>
+</div>
+<c:import url="include/footer.jsp" />
 </body>
 </html>
