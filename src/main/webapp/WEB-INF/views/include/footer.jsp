@@ -11,12 +11,18 @@ a{
 	text-decoration: none;
 	
 }
+footer{ 
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:200px;
+	width:100%;
+  }
 </style>
 
 
-<div class="pb-5"></div>
 <!-- FOOTER -->
-    <footer class="w-100 py-4 flex-shrink-0">
+    <footer class="container-fluid navbar-fixed-bottom">
         <div class="container py-4">
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 col-md-6">

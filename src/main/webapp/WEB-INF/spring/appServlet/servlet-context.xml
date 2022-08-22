@@ -43,6 +43,7 @@
 	
 	</beans:bean>
 	<context:component-scan base-package="com.prjt.lsm" />
+	<context:component-scan base-package="com.prjt.lsm/**" />
 	<context:component-scan base-package="com.prjt.lsm.controller" />
 	<context:component-scan base-package="com.prjt.lsm.dao" />
 	<context:component-scan base-package="com.prjt.lsm.service" />
@@ -63,6 +64,13 @@
 			<exclude-mapping path="/board/**"/>
 			<exclude-mapping path="/checkId.do"/>
 			<exclude-mapping path="/resources/css/*"/>
+			
+			<exclude-mapping path="/captcha.do"/>
+			<exclude-mapping path="/captchaImg.do"/>
+			<exclude-mapping path="/captchaAudio.do"/>
+			<exclude-mapping path="/chkAnswer.do"/>
+			
+			
 			
 			<beans:bean id="loginInterceptor" class="com.prjt.lsm.interceptor.LoginInterceptor"/>
 		</interceptor>

@@ -73,7 +73,7 @@ public class BoardController {
 
 	@RequestMapping(value = "Write.do", method = RequestMethod.GET)
 	public ModelAndView write(Locale locale, ModelAndView mav, BoardVo vo, HttpServletRequest request) {
-
+		
 		mav.setViewName("/board/Write");
 
 		return mav;

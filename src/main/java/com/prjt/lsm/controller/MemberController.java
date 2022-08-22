@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.prjt.lsm.service.MemberService;
@@ -25,6 +26,8 @@ public class MemberController {
 		this.memberService = memberService;
 	}
 
+	
+	
 	@RequestMapping("Join.do")
 	public String Join() {
 
@@ -33,9 +36,10 @@ public class MemberController {
 
 	@RequestMapping("JoinProcess.do")
 	public String JoinProcess(MemberVo vo) {
+		
 
 		memberService.joinProcess(vo);
-		return "redirect:/";
+		return "redirect:/Login.do";
 	}
 
 	@RequestMapping("Login.do")

@@ -30,6 +30,17 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+	<!-- 자동가입방지문자 코드 -->
+	<servlet>
+		<servlet-name>captcha</servlet-name>
+		<servlet-class>servlet.CaptchaServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>captcha</servlet-name>
+		<url-pattern>/captcha</url-pattern>
+	</servlet-mapping>
+	
 <!-- 한글 처리 코드 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>

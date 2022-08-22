@@ -32,8 +32,8 @@ a:hover {
 }
 </style>
 </head>
-<body class="text-center">
-
+<body>
+<div class="text-center">
 	<form method="post">
 		<input type="hidden" name="type" value="${pageMaker.cri.type}">
 		<input type="hidden" name="page" value="${pageMaker.cri.page}">
@@ -151,5 +151,7 @@ a:hover {
 			</nav>
 		</div>
 	</div>
+</div>
+<c:import url="../include/footer.jsp" />
 </body>
 </html>

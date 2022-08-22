@@ -7,7 +7,15 @@ public class MemberVo {
 	private String member_pw;
 	private String delyn;
 	private String member_name;
+	private String captcha;
 	
+	
+	public String getCaptcha() {
+		return captcha;
+	}
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
 	public int getMidx() {
 		return midx;
 	}

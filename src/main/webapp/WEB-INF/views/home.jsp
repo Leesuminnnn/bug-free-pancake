@@ -16,7 +16,9 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
+<style>
 
+</style>
 </head>
 <body class="">
 <div class="text-center">
@@ -41,7 +43,7 @@
 				</a></li>
 				<!-- Link 메뉴 -->
 				<li class="nav-item"><a class="nav-link"
-							href="${pageContext.request.contextPath}/#">링크1</a></li>
+							href="${pageContext.request.contextPath}/#">시공사례</a></li>
 				<c:choose>
 					<c:when test="${sessionScope.userid != null}">
 						<li class="nav-item"><a class="nav-link"
