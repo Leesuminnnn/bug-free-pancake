@@ -126,19 +126,19 @@
 				<img
 					src="${pageContext.request.contextPath}/resources/images/aa.jpg"
 					class="d-b lock w-70">
-				<h5>page1</h5>
+				<h5></h5>
 			</div>
 			<div class="carousel-item">
 				<img
 					src="${pageContext.request.contextPath}/resources/images/bb.png"
 					class="d-b lock w-70">
-				<h5>page2</h5>
+				<h5></h5>
 			</div>
 			<div class="carousel-item">
 				<img
 					src="${pageContext.request.contextPath}/resources/images/cc.png"
 					class="d-b lock w-70">
-				<h5>page3</h5>
+				<h5></h5>
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button"

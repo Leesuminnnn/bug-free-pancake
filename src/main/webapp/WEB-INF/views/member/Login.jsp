@@ -30,15 +30,16 @@
 	<div class="row">
 		<div class="col-4"></div>
 		<div class="col-4">
-		
+		<div class="card p-4 p-md-4 my-4 mx-3 mx-md-0">
 		<form action="${pageContext.request.contextPath}/member/LoginProcess.do" method="post">
 		<div class="form-group">
-			<input class="form-control" type="text" name="member_id" placeholder="input id" autofocus>
-			<input class="form-control" type="password" name="member_pw" placeholder="input pw">
+			<input class="form-control my-2" type="text" name="member_id" placeholder="ID" autofocus>
+			<input class="form-control my-2" type="password" name="member_pw" placeholder="PW">
 		</div>
 		<button class="btn btn-outline-dark" type="submit">Login</button>
 		</form>
 		
+		</div>
 		</div>
 		<div class="col-4"></div>
 	</div>

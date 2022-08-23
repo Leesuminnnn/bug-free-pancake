@@ -46,11 +46,9 @@
 					idCheck = 1;
 					if (idCheck == 1 && pwdCheck == 1) {
 						$("#submit").prop("disabled", false);
-						$("#submit").css("background-color", "#4CAF50");
 					}
 				} else if (data == 'Y') {
 					$("#submit").prop("disabled", true);
-					$("#submit").css("background-color", "#aaaaaa");
 					$("#member_id").css("background-color", "#FFCECE");
 					idCheck = 0;
 				}
@@ -71,7 +69,6 @@
 			pwdCheck = 1;
 			if (idCheck == 1 && pwdCheck == 1) {
 				$("#submit").prop("disabled", false);
-				$("#submit").css("background-color", "#4CAF50");
 			}
 		} else if (inputed != reinputed) {
 			pwdCheck = 0;

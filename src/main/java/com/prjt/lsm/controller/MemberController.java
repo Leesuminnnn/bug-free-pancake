@@ -39,7 +39,7 @@ public class MemberController {
 		
 
 		memberService.joinProcess(vo);
-		return "redirect:/Login.do";
+		return "redirect:/member/Login.do";
 	}
 
 	@RequestMapping("Login.do")
